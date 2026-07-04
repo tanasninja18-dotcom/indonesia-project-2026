@@ -1,0 +1,23 @@
+.content-blocks {
+  padding: 40px 0;
+}
+
+.content-blocks__list {
+  display: grid;
+  gap: 16px;
+}
+
+.content-block {
+  background: $color-surface;
+  border-radius: $border-radius;
+  padding: 24px;
+}
+
+.content-block__title {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.content-block__text {
+  color: $color-muted;
+}

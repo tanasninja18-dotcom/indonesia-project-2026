@@ -1,0 +1,23 @@
+.footer {
+  background: $color-surface;
+  padding: 24px 0;
+}
+
+.footer__inner {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer__text {
+  color: $color-muted;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

@@ -1,0 +1,18 @@
+.gallery {
+  padding: 40px 0;
+}
+
+.gallery__grid {
+  display: grid;
+  gap: 12px;
+}
+
+.gallery__item {
+  min-height: 160px;
+  border-radius: $border-radius;
+  background: linear-gradient(180deg, rgba(31,111,94,0.12), rgba(31,111,94,0.04));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text;
+}

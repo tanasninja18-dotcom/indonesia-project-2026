@@ -1,0 +1,30 @@
+.getting-there {
+  padding: 40px 0;
+}
+
+.timeline {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline__step {
+  background: $color-surface;
+  border-radius: $border-radius;
+  padding: 24px;
+}
+
+.timeline__number {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: $color-secondary;
+}
+
+.timeline__title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.timeline__text {
+  color: $color-muted;
+}

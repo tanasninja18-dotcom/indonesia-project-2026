@@ -1,0 +1,172 @@
+.header {
+  background: transparent; /* overlay on hero */
+  padding: 14px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+}
+
+.header__inner {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* mobile: controls to right */
+  gap: 12px;
+}
+
+/* Mobile-first: nav hidden by default, toggle visible */
+.header__brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.header__logo {
+  display: inline-block;
+  height: 36px;
+}
+
+.header__brand .header__logo {
+  /* when logo is an image */
+  max-height: 36px;
+  width: auto;
+}
+
+.header__brand-text {
+  display: none;
+  color: #fff;
+  font-family: $font-family-heading;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.header__logo--text {
+  font-family: $font-family-heading;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $color-text;
+}
+
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__search,
+.header__toggle {
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+  color: $color-text;
+}
+
+.header__search img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.header__burger {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.burger__line {
+  width: 20px;
+  height: 2px;
+  background: #fff; /* always white */
+  border-radius: 1px;
+  transition: transform $transition-default, opacity $transition-default;
+}
+
+.header__nav {
+  display: none;
+  flex: 1 1 auto;
+}
+
+.header--open .header__nav {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: $color-surface;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.header__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__item {
+  border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+.header__link {
+  display: block;
+  padding: 12px $container-padding;
+  color: #fff; /* white links over hero */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Desktop and up */
+@media (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    position: static;
+    justify-content: flex-start;
+    margin-right: auto;
+    padding-left: 18px;
+    flex: 1 1 auto;
+  }
+
+  .header__list {
+    flex-direction: row;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .header__item {
+    border-top: none;
+  }
+
+  .header__link {
+    padding: 0;
+  }
+
+  .header__toggle {
+    display: inline-flex; /* show burger on desktop near search */
+  }
+  .header__brand .header__logo {
+    max-height: 44px;
+  }
+  .header__brand-text {
+    display: inline-block;
+    font-size: 0.95rem;
+  }
+  /* place controls to far right */
+  .header__controls {
+    margin-left: auto;
+  }
+}
+
+/* Utility: focus styles */
+.header__link:focus,
+.header__search:focus,
+.header__toggle:focus {
+  outline: 3px solid rgba(31,111,94,0.12);
+  outline-offset: 2px;
+}
