@@ -1,5 +1,5 @@
 .header {
-  background: transparent; /* overlay on hero */
+  background: transparent; 
   padding: 14px 0;
   position: absolute;
   top: 0;
@@ -14,11 +14,10 @@
   padding: 0 $container-padding;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* mobile: controls to right */
+  justify-content: space-between; 
   gap: 12px;
 }
 
-/* Mobile-first: nav hidden by default, toggle visible */
 .header__brand {
   display: flex;
   align-items: center;
@@ -32,7 +31,6 @@
 }
 
 .header__brand .header__logo {
-  /* when logo is an image */
   max-height: 36px;
   width: auto;
 }
