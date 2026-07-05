@@ -83,6 +83,7 @@
   background: #fff; /* always white */
   border-radius: 1px;
   transition: transform $transition-default, opacity $transition-default;
+  display: block;
 }
 
 .header__nav {
@@ -115,7 +116,7 @@
 .header__link {
   display: block;
   padding: 12px $container-padding;
-  color: #fff; /* white links over hero */
+  color: #fff; 
   text-decoration: none;
   font-weight: 600;
 }
@@ -158,6 +159,9 @@
   /* place controls to far right */
   .header__controls {
     margin-left: auto;
+  }
+  .burger__line {
+    display: none;
   }
 }
 
