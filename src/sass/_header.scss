@@ -1,6 +1,6 @@
 .header {
   background: transparent; 
-  padding: 14px 0;
+  padding: 22px 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -15,19 +15,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  gap: 12px;
+  gap: 16px;
 }
 
 .header__brand {
   display: flex;
   align-items: center;
   text-decoration: none;
-  gap: 10px;
+  gap: 8px;
+  min-width: 0;
 }
 
 .header__logo {
   display: inline-block;
   height: 36px;
+  flex: 0 0 auto;
 }
 
 .header__brand .header__logo {
@@ -36,11 +38,18 @@
 }
 
 .header__brand-text {
-  display: none;
+  display: inline-block;
   color: #fff;
   font-family: $font-family-heading;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: 1.05rem;
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.header__brand-text span {
+  display: block;
 }
 
 .header__logo--text {
@@ -53,21 +62,22 @@
 .header__controls {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
+  flex: 0 0 auto;
 }
 
 .header__search,
 .header__toggle {
   background: transparent;
   border: 0;
-  padding: 8px;
+  padding: 4px;
   cursor: pointer;
   color: $color-text;
 }
 
 .header__search img {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   display: block;
 }
 
@@ -78,7 +88,7 @@
 }
 
 .burger__line {
-  width: 20px;
+  width: 22px;
   height: 2px;
   background: #fff;
   border-radius: 1px;
@@ -123,6 +133,10 @@
 
 /* Desktop and up */
 @media (min-width: 768px) {
+  .header {
+    padding: 14px 0;
+  }
+
   .header__nav {
     display: flex;
     position: static;
@@ -155,6 +169,12 @@
   .header__brand-text {
     display: inline-block;
     font-size: 0.95rem;
+    line-height: 1;
+    text-transform: none;
+  }
+
+  .header__brand-text span {
+    display: block;
   }
   /* place controls to far right */
   .header__controls {
