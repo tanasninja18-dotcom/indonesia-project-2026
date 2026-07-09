@@ -131,7 +131,6 @@
   font-weight: 600;
 }
 
-/* Desktop and up */
 @media (min-width: 768px) {
   .header {
     padding: 14px 0;
@@ -161,7 +160,7 @@
   }
 
   .header__toggle {
-    display: inline-flex; /* show burger on desktop near search */
+    display: inline-flex;
   }
   .header__brand .header__logo {
     max-height: 44px;
@@ -176,7 +175,6 @@
   .header__brand-text span {
     display: block;
   }
-  /* place controls to far right */
   .header__controls {
     margin-left: auto;
   }
@@ -185,7 +183,6 @@
   }
 }
 
-/* Utility: focus styles */
 .header__link:focus,
 .header__search:focus,
 .header__toggle:focus {

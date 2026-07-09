@@ -13,7 +13,6 @@
 .hero__bg {
   position: absolute;
   inset: 0;
-  /* Use provided JPGs: mobile-first using mobile images, 2x variants via image-set */
   background-image: image-set(
     url('../img/hero-bg-1x-mobile.jpg') 1x,
     url('../img/hero-bg-2x-mobile.jpg') 2x
@@ -75,7 +74,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #DD2242; /* requested color */
+  background: #DD2242;
   color: #fff;
   width: min(100%, 315px);
   min-height: 58px;
@@ -127,7 +126,6 @@
   min-height: 180px;
 }
 
-/* Features panel shared styles */
 .hero__features {
   display: grid;
   gap: 26px;
@@ -233,7 +231,6 @@
   }
 }
 
-/* Larger screens */
 @media (min-width: 1024px) {
   .hero {
     min-height: 80vh;
@@ -246,7 +243,6 @@
     gap: 32px;
   }
 
-  /* Switch to desktop hero background images */
   .hero__bg {
     background-image: image-set(
       url('../img/hero-bg-1x-desktop.jpg') 1x,
@@ -254,7 +250,6 @@
     );
   }
 
-  /* Desktop: features panel at the bottom-right, adjacent to media */
   .hero__bottom {
     position: absolute;
     right: 0;
@@ -308,7 +303,6 @@
     overflow: hidden;
   }
 
-  /* place title/CTA on the left column */
   .hero__content {
     width: 520px;
     padding-left: $container-padding;
