@@ -16,6 +16,13 @@ body {
   color: $color-text;
 }
 
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-heading;
 }

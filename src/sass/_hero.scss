@@ -32,7 +32,8 @@
 .hero__inner {
   max-width: $container-max-width;
   margin: 0 auto;
-  padding: 0 $container-padding 52px;
+  padding-top: 0;
+  padding-bottom: 52px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
@@ -195,7 +196,7 @@
   height: 38px;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .hero {
     padding-top: 130px;
   }
@@ -238,7 +239,10 @@
   }
 
   .hero__inner {
-    padding: 76px $container-padding 290px;
+    padding-top: 76px;
+    padding-right: $container-padding;
+    padding-bottom: 290px;
+    padding-left: $container-padding;
     grid-template-columns: 1fr;
     gap: 32px;
   }
