@@ -1,23 +1,60 @@
 <section class="numbers">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-header__eyebrow">By The Numbers</span>
-      <h2 class="section-header__title">Numbers that define the journey.</h2>
-    </div>
+    <div class="container">
+        <div class="secrets">
+            <h2 class="secrets__title">Explore Our Secrets</h2>
+            <div class="secrets__slider">
+                <button class="secrets__arrow secrets__prev">❮</button>
+                <div class="secrets__slider-wrapper">
+                    <div class="secrets__track">
+                        <img src="img/bali1.jpg" class="secrets__item">
+                        <img src="img/bali2.jpg" class="secrets__item">
+                        <img src="img/bali3.jpg" class="secrets__item">
+                    </div>
+                </div>
+                <button class="secrets__arrow secrets__next">❯</button>
+            </div>
+        </div>
 
-    <div class="numbers__grid">
-      <article class="numbers-card">
-        <strong class="numbers-card__value">17,000+</strong>
-        <p class="numbers-card__label">Islands across the archipelago</p>
-      </article>
-      <article class="numbers-card">
-        <strong class="numbers-card__value">300+</strong>
-        <p class="numbers-card__label">Distinct ethnic groups</p>
-      </article>
-      <article class="numbers-card">
-        <strong class="numbers-card__value">13</strong>
-        <p class="numbers-card__label">UNESCO World Heritage sites</p>
-      </article>
+        <div class="section-header">
+            <h2 class="section-header__title">By The Numbers</h2>
+            <p class="section-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.</p>
+        </div>
+
+        <div class="numbers__grid">
+            <div class="numbers-card">
+                <h3 class="numbers-card__value">100+</h3>
+                <p class="numbers-card__label">Label description</p>
+            </div>
+            <div class="numbers-card">
+                <h3 class="numbers-card__value">43,000+</h3>
+                <p class="numbers-card__label">Label description</p>
+            </div>
+            <div class="numbers-card">
+                <h3 class="numbers-card__value">30+</h3>
+                <p class="numbers-card__label">Label description</p>
+            </div>
+        </div>
     </div>
-  </div>
+    
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.secrets__track');
+  const next = document.querySelector('.secrets__next');
+  const prev = document.querySelector('.secrets__prev');
+  let index = 0;
+
+  next.addEventListener('click', () => {
+    if (index < 2) {
+      index++;
+      track.style.transform = `translateX(-${index * 400}px)`;
+    }
+  });
+  prev.addEventListener('click', () => {
+    if (index > 0) {
+      index--;
+      track.style.transform = `translateX(-${index * 400}px)`;
+    }
+  });
+});
+</script>
 </section>

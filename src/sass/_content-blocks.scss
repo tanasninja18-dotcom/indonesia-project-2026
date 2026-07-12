@@ -1,23 +1,40 @@
 .content-blocks {
-  padding: 40px 0;
-}
+    padding: 120px 0;
+    background-color: #ffffff;
+    background-image: url('../img/topography.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
 
-.content-blocks__list {
-  display: grid;
-  gap: 16px;
-}
+    &__title {
+        max-width: 700px;
+        margin: 0 auto 24px;
+        font-size: 48px;
+        font-weight: 700;
+        color: #010A20;
+        line-height: 1.2;
+    }
 
-.content-block {
-  background: $color-surface;
-  border-radius: $border-radius;
-  padding: 24px;
-}
+    &__text {
+        max-width: 650px;
+        margin: 0 auto 40px;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #6F7787;
+    }
 
-.content-block__title {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
+    &__button {
+        display: inline-block;
+        padding: 16px 42px;
+        background-color: #DD2242;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 32px;
+        font-weight: 700;
+        transition: 0.3s;
 
-.content-block__text {
-  color: $color-muted;
+        &:hover {
+            background-color: #c51d3b;
+        }
+    }
 }
