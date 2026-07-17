@@ -29,6 +29,78 @@
   background: linear-gradient(180deg, rgba(8,12,20,0.22) 0%, rgba(8,12,20,0.5) 100%);
 }
 
+.hero__side-nav {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  top: 138px;
+  bottom: 38px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 24px;
+}
+
+@media (max-width: 767px) {
+  .hero__side-nav {
+    display: none !important;
+  }
+}
+
+.hero__progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero__progress-line {
+  position: relative;
+  display: block;
+  width: 2px;
+  height: clamp(185px, 31vh, 240px);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.hero__progress-line span {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  display: block;
+  width: 4px;
+  height: 25%;
+  background: #dd2242;
+}
+
+.hero__progress-number,
+.hero__socials a {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  transform: rotate(-90deg);
+}
+
+.hero__socials {
+  display: grid;
+  gap: 28px;
+}
+
+.hero__socials a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero__progress:focus-visible,
+.hero__socials a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
 .hero__inner {
   max-width: $container-max-width;
   margin: 0 auto;
@@ -205,6 +277,11 @@
     padding-top: 130px;
   }
 
+  .hero__side-nav {
+    display: flex;
+    left: 34px;
+  }
+
   .hero__inner {
     padding: 24px 48px 70px;
   }
@@ -260,7 +337,7 @@
     bottom: 0;
     display: flex;
     gap: 0;
-    align-items: stretch;
+    align-items: flex-end;
     justify-content: flex-end;
   }
 
@@ -309,8 +386,8 @@
 
   .hero__content {
     width: 520px;
-    padding-left: $container-padding;
-    margin-left: 0;
+    padding-left: 0;
+    margin-left: clamp(76px, 7.3vw, 140px);
     text-align: left;
     z-index: 4;
   }
@@ -346,5 +423,35 @@
 @media (min-width: 1200px) {
   .hero__inner {
     gap: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__features {
+    flex: 0 1 min(981px, calc(100vw - 334px));
+    width: min(981px, calc(100vw - 334px));
+    min-width: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    height: 168px;
+    min-height: 168px;
+    padding: 0;
+  }
+
+  .hero__feature {
+    width: auto;
+    min-height: 168px;
+    padding: 19px;
+  }
+
+  .hero__media {
+    flex-basis: 334px;
+    width: 334px;
+  }
+
+  .hero__media-figure {
+    width: 334px;
+    max-width: 334px;
+    min-height: 203px;
+    height: 203px;
   }
 }
